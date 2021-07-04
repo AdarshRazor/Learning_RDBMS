@@ -132,4 +132,20 @@ For this we make a new table, which is as follows:
 ```SQL
 Select <column_name> from <table_name> where <condition>;
 ```
+```SQL
+Select * from emp_new   # display the whole emp_new table
 
+Select top(3) * from emp_new    # display the top 3 values
+
+Select top(2) dept_no, dept_name from emp_new   # display dept_no and dept_name
+```
+
+<br>
+
+## o Ordering Result
+
+Display the specific column in ascending or descending order ( default is ascending order ).
+
+```SQL
+Select |distinct| <column_name> from <table_name> where <condition> order by <column_name> <asc|desc>
+```
