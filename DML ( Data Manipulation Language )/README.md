@@ -17,6 +17,9 @@ Earlier table:
 
 |emp_id|**first_name**|**last_name**|salary|
 |-|-|-|-|
+|1|Random|Name|50000|
+|2|John|Doe|45000|
+|3|Sue|Taylor|55000|
 
 <br>
 
