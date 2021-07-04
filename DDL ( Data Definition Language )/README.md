@@ -183,7 +183,7 @@ ADD CONSTRAINT fk_product_id
 <br>
 
 > 💡 Now if you want to delete the **prod_id** from the table *product*. It will show an error, because that column is in use as foreign key in another table. 
-There might be time where you need to delete the column then you can use the following command. This will delete the column from that particular table as well where it is defined.
+There might be time where you need to **delete** the column then you can use the following command. This will delete the column from that particular table as well where it is defined.
 
 <br>
 
