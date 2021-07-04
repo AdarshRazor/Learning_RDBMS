@@ -90,3 +90,24 @@ OR
 ```SQL
 Update emp set first_name = 'Random2', last_name = 'Name2' where emp_id=1;
 ```
+
+<br>
+
+## Delete Statements
+
+Delete commands help to delte **rows / record** from database table. Delete statements can be executed with or without where conditions.
+
+```SQL
+Delete from <table_name> [where <condition>];
+```
+> 💡 Execution of delete commands without where condition will remove all the records / rows from the table.
+
+<br>
+
+```SQL
+Delete from emp where emp_id=2;
+```
+|emp_id|**first_name**|**last_name**|salary|
+|-|-|-|-|
+|1|Random|Name|50000|
+|3|Sue|Taylor|55000|
