@@ -49,9 +49,9 @@ As per first normal form:
 |Alex|14|CR005|
 |Stuart|17|CR005|
 
-```
-Using the first normal form, data redundancy increases, as there will be many columns with same data in multiple rows but each row as a whole will be unique.
-```
+
+> Using the first normal form, data redundancy increases, as there will be many columns with same data in multiple rows but each row as a whole will be unique.
+
 
 ----
 
@@ -81,9 +81,9 @@ As per second normal form:
 |Alex|CR005|
 |Stuart|CR005|
 
-```
-In Subject table the candidate key will be {Student, Course} column. Now both teh above tables qualifies for Second Normal Form and will never suffer from Update Anomalies.
-```
+
+> In Subject table the candidate key will be {Student, Course} column. Now both teh above tables qualifies for Second Normal Form and will never suffer from Update Anomalies.
+
 -----
 
 ## 3. Third Normal Form
@@ -105,9 +105,10 @@ Example:
 |Zip|Street|City|State|
 |-|-|-|-|
 
-```
-Now as we divid the table into 2 so we can make Student_id as the primary key in table1 and Zip in table2.
-```
+<br>
+
+> Now as we divid the table into 2 so we can make Student_id as the primary key in table1 and Zip in table2.
+
 
 ----
 
