@@ -50,14 +50,14 @@ Use Test1
 
 Insert into emp_new (new_empid, new_firstname, new_lastname)
 (Select * from emp);
-
+```
 OR
-
+```SQL
 Insert into emp_new (new_empid, new_firstname, new_lastname)
 (Select * from emp Where emp_id > 5);   # can put condition
-
+```
 OR
-
+```SQL
 Insert into emp_new (new_firstname, new_lastname)
 (Select first_name, last_name from emp);
 ```
@@ -85,8 +85,8 @@ UPDATE <table_name> Set <column_name> = <val> Where <condition>
 
 ```SQL
 Update emp set last_name = 'Name1' where emp_id=1;
-
+```
 OR
-
+```SQL
 Update emp set first_name = 'Random2', last_name = 'Name2' where emp_id=1;
 ```
