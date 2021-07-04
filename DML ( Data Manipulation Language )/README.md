@@ -67,9 +67,26 @@ Insert into emp_new (new_firstname, new_lastname)
 
 Update statement **updates / modufy** the existing data in the tables. Using these statements we can update the value of a single column or multiple columns in a single statement.
 
+Earlier table:
+
+|emp_id|**first_name**|**last_name**|salary|
+|-|-|-|-|
+|1|Random|Name|50000|
+|2|John|Doe|45000|
+|3|Sue|Taylor|55000|
+
 ```SQL
 UPDATE <table_name> Set <column_name> = <val> Where <condition>
 ```
 
 > 💡 Without **where** clause all the rows will get update. While updating more than one column, the column must be seperated by comma operator. 
 
+<br>
+
+```SQL
+Update emp set last_name = 'Name1' where emp_id=1;
+
+OR
+
+Update emp set first_name = 'Random2', last_name = 'Name2' where emp_id=1;
+```
