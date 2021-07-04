@@ -8,7 +8,7 @@ Deals with data manipulation and includes most common SQL statements, and it is 
 
 <br>
 
-## Insert Statement
+## o Insert Statement
 
 Insert command is used to **Insert data / record** into the database table.
 Inserting values for the specific columns in the table. ( Always include the columns which are not null ).
@@ -63,7 +63,7 @@ Insert into emp_new (new_firstname, new_lastname)
 ```
 <br>
 
-## Update Statements
+## o Update Statements
 
 Update statement **updates / modufy** the existing data in the tables. Using these statements we can update the value of a single column or multiple columns in a single statement.
 
@@ -93,7 +93,7 @@ Update emp set first_name = 'Random2', last_name = 'Name2' where emp_id=1;
 
 <br>
 
-## Delete Statements
+## o Delete Statements
 
 Delete commands help to delte **rows / record** from database table. Delete statements can be executed with or without where conditions.
 
@@ -111,3 +111,25 @@ Delete from emp where emp_id=2;
 |-|-|-|-|
 |1|Random|Name|50000|
 |3|Sue|Taylor|55000|
+
+<br>
+
+## o Select Statement
+
+These statements help us to retrieve records from data table. Where condition is optional in select statements. Various operators can be used in where conditions for data retrieval.
+
+For this we make a new table, which is as follows:
+
+**Table Name: emp_new**
+
+|dept_no|dept_name|LOC|
+|-|-|-|
+|10|accounts|Delhi|
+|20|HR|Chennai|
+|30|IT|Hyderabad|
+|40|Marketing|Bangalore|
+
+```SQL
+Select <column_name> from <table_name> where <condition>;
+```
+
