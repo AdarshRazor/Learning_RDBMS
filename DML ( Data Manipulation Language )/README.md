@@ -1,10 +1,10 @@
 # DML (Data Manipulation Language)
 
 Deals with data manipulation and includes most common SQL statements, and it is used to store, modify, retrieve, delete and update data in database.
-- Select
 - Insert
 - Update
 - Delete
+- Select
 
 <br>
 
@@ -61,3 +61,15 @@ OR
 Insert into emp_new (new_firstname, new_lastname)
 (Select first_name, last_name from emp);
 ```
+<br>
+
+## Update Statements
+
+Update statement **updates / modufy** the existing data in the tables. Using these statements we can update the value of a single column or multiple columns in a single statement.
+
+```SQL
+UPDATE <table_name> Set <column_name> = <val> Where <condition>
+```
+
+> 💡 Without **where** clause all the rows will get update. While updating more than one column, the column must be seperated by comma operator. 
+
