@@ -149,3 +149,53 @@ Display the specific column in ascending or descending order ( default is ascend
 ```SQL
 Select |distinct| <column_name> from <table_name> where <condition> order by <column_name> <asc|desc>
 ```
+
+Example Table:
+
+|dept_no|dept_name|LOC|
+|-|-|-|
+|10|accounts|Delhi|
+|20|HR|Chennai|
+|30|IT|Hyderabad|
+|40|Marketing|Bangalore|
+
+```SQL
+Select * from emp_new Order by dept_no desc
+
+Select top(2) * from emp_new
+
+Select top(2) * from emp_new Order by dept_no desc
+```
+
+## o Filtering: Logical Operators
+
+### Logical Operators ( AND, OR and NOT )
+Used in where conditions to join more than two queries. Used to combine the results of two or more conditions to produce single result.
+
+- AND Logical Operator:
+
+    Used to combine two conditions and it fetches the result which satisfy both the conditions.
+
+    |emp_id|**first_name**|**last_name**|salary|
+    |-|-|-|-|
+    |1|Random|Name|50000|
+    |2|John|Doe|45000|
+    |3|Sue|Taylor|55000|
+
+    Example:
+
+    ```SQL
+    Select first_name, last_name from emp where first_name="Random" and last_name="Name";
+    ```
+    |**first_name**|**last_name**|
+    |-|-|
+    |Random|Name|
+
+    ```SQL
+    Select first_name, last_name from emp where salary > 48000 and salary > 56000
+    ```
+
+    |**first_name**|**last_name**|
+    |-|-|
+    |Random|Name|
+    |Sue|Taylor|
