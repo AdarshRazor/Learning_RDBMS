@@ -227,7 +227,7 @@ Used in where conditions to join more than two queries. Used to combine the resu
 
     <br>
 
-- OR Logical Operator:
+- NOT Logical Operator:
 
     NOT Operator is used to negate the conditions and it fetches opposite of the result with satisfy the condition. It is used in combination with other keywords like NOT IN, NOT between etc.
 
@@ -246,3 +246,51 @@ Used in where conditions to join more than two queries. Used to combine the resu
     |**first_name**|**last_name**|
     |-|-|
     |John|Doe|
+
+## o Filtering: Comparison Operator
+
+Comparison operators (=, !=, <>, >=, <=, LIKE, BETWEEN, IN): Comparison operators are used in where condition to fetch results from table.
+
+- Between Operator:
+
+    The Between operator is used to search for values that are within a set of values.
+
+    ```SQL
+    Select first_name, emp_id, from emp where salary between 40000 and 46000;
+    ```
+    |emp_id|**first_name**|
+    |-|-|
+    |2|John|
+
+<br>
+
+- IN Operator:
+
+    Fetches values from a set of literals. It is used to test whether or not a value is "in" the list of values provided after the keyword IN. 
+    
+    > 💡 The IN condition can be used with any data type in SQL.
+
+    ```SQL
+    Select first_name, emp_id from employee where salary in 50000;
+    ```
+
+    |emp_id|**first_name**|
+    |-|-|
+    |1|Random|
+
+    <br>
+
+- Comparison Operator: `>, =, <, >=`
+
+    These are the same operator which we use in mathematics.
+    Some of the example are as follows:
+
+    ```SQL
+    Select first_name, emp, salary from emp where salary > 50000;
+    ```
+
+    |emp_id|**first_name**|salary|
+    |-|-|-|
+    |1|Random|50000|
+    |2|John|45000|
+    |3|Sue|55000|
