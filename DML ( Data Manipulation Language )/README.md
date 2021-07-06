@@ -8,7 +8,7 @@ Deals with data manipulation and includes most common SQL statements, and it is 
 
 <br>
 
-## o Insert Statement
+## Insert Statement
 
 Insert command is used to **Insert data / record** into the database table.
 Inserting values for the specific columns in the table. ( Always include the columns which are not null ).
@@ -63,7 +63,7 @@ Insert into emp_new (new_firstname, new_lastname)
 ```
 <br>
 
-## o Update Statements
+## Update Statements
 
 Update statement **updates / modufy** the existing data in the tables. Using these statements we can update the value of a single column or multiple columns in a single statement.
 
@@ -93,7 +93,7 @@ Update emp set first_name = 'Random2', last_name = 'Name2' where emp_id=1;
 
 <br>
 
-## o Delete Statements
+## Delete Statements
 
 Delete commands help to delte **rows / record** from database table. Delete statements can be executed with or without where conditions.
 
@@ -114,7 +114,7 @@ Delete from emp where emp_id=2;
 
 <br>
 
-## o Select Statement
+## Select Statement
 
 These statements help us to retrieve records from data table. Where condition is optional in select statements. Various operators can be used in where conditions for data retrieval.
 
@@ -294,3 +294,66 @@ Comparison operators (=, !=, <>, >=, <=, LIKE, BETWEEN, IN): Comparison operator
     |1|Random|50000|
     |2|John|45000|
     |3|Sue|55000|
+
+<br>
+
+## o Comparison Operator: LIKE Condition
+
+Like condition to person wild card searches of valid search string values. Seach conditions can contain etiher characters or numbers. `**%**` denotes zero or many characters. `**_**` denotes one character.
+
+```SQL
+Select emp_id, salary from emp where first_name like 'j%';
+```
+|emp_id|salary|
+|-|-|
+|2|45000|
+
+
+```SQL
+Select emp_id, salary from emp where first_name like 'Tay_ _ _';
+```
+
+|emp_id|salary|
+|-|-|
+|3|55000|
+
+<br>
+
+----
+<br>
+
+## Case Expression
+
+Used as a type of **IF-THEN-ELSE** statement. `CASE` is used to provide if-then-else type of logic to SQL.
+
+Example:
+```SQL
+CASE column_name
+WHEN condition1 THEN result1
+WHEN condition2 THEN result2
+ELSE result
+END
+```
+
+New table: 
+
+|emp_id|**first_name**|**last_name**|LOC|
+|-|-|-|-|
+|1|Random|Name|Chennai|
+|2|John|Doe|Delhi|
+|3|Sue|Taylor|Bangalore|
+
+```SQL
+Select CASE (LOC)
+WHEN 'Chennai' Then 'TamilNaud'
+When 'Bangalore' Then 'Karnataka'
+ELSE 'No Idea'
+END
+from emp
+```
+
+|(no column name)|
+|-|
+|TamilNadu|
+|No Idea|
+|Karnataka|
